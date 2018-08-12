@@ -128,7 +128,7 @@ public class ThemeableBrowser extends CordovaPlugin {
             }
             final String target = t;
             final Options features = parseFeature(args.optString(2));
-
+            features.fullscreen = true;
             this.cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
