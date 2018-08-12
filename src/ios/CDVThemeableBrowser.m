@@ -1155,6 +1155,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    UIView * statusBarView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
+    statusBarView.backgroundColor=[UIColor colorWithWhite:0.000 alpha:0.500];
+    [self.view addSubview:statusBarView];
 }
 
 - (void)viewDidUnload
@@ -1166,7 +1170,7 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return _statusBarStyle;
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)close
